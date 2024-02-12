@@ -1,13 +1,15 @@
 {
   "name": "will-you-be-my-valentine",
-  "homepage": "https://saurabhnemade.github.io/will-you-be-my-valentine",
+  "homepage": "https://Eris-F.github.io/will-you-be-my-valentine",
   "private": true,
   "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "predeploy": "pnpm run build",
     "deploy": "vite build && gh-pages -d dist",
+    "clean": "gh-pages-clean",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
