@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import donaldndaisy from "./donaldndaisy.png"
 
 export default function Page() {
   const [noCount, setNoCount] = useState(0);
@@ -12,22 +13,22 @@ export default function Page() {
 
   const getNoButtonText = () => {
     const phrases = [
-      "No",
-      "Are you sure?",
-      "What if I asked really nicely?",
-      "Pretty please",
-      "With a chocolate rice cake on top",
-      "What about a matcha frostie",
+      "JO?",
+      "Sigurt?",
+      "what if i begged?",
+      "Come on",
+      "ti blej 2 pata",
+      "ti blej 3 pata",
       "PLEASE POOKIE",
       "But :*(",
-      "I am going to die",
-      "Yep im dead",
-      "ok ur talking to nathan's ghost",
-      "please babe",
-      ":((((",
-      "PRETTY PLEASE",
-      "Estoy muerto",
-      "No :(",
+      "imma die fr",
+      "deka fr kshtu",
+      "ok ur talking to erisi's ghost",
+      "please dor",
+      "insane actually",
+      "HALA JO A?",
+      "please",
+      "ski qare",
     ];
 
     return phrases[Math.min(noCount, phrases.length - 1)];
@@ -37,29 +38,29 @@ export default function Page() {
     <div className="-mt-16 flex h-screen flex-col items-center justify-center">
       {yesPressed ? (
         <>
-          <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" />
+          <img src={donaldndaisy}/>
           <div className="my-4 text-4xl font-bold">WOOOOOO!!! I love you pookie!! ;))</div>
         </>
       ) : (
         <>
           <img
             className="h-[200px]"
-            src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif"
+            src="https://media1.tenor.com/m/F8gnm8OiiHsAAAAC/rose-cute.gif"
           />
-          <h1 className="my-4 text-4xl">Will you be my Valentine?</h1>
+          <h1 className="my-4 text-4xl font-mono">Will you be my Valentine pookie?</h1>
           <div className="flex items-center">
             <button
-              className={`mr-4 rounded bg-green-500 px-4 py-2 font-bold text-white hover:bg-green-700`}
+              className={`mr-4 rounded bg-green-500 px-20 py-2 font-bold text-white hover:bg-green-700`}
               style={{ fontSize: yesButtonSize }}
               onClick={() => setYesPressed(true)}
             >
-              Yes
+              Po
             </button>
             <button
               onClick={handleNoClick}
               className=" rounded bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-700"
             >
-              {noCount === 0 ? "No" : getNoButtonText()}
+              {noCount === 0 ? "Jo" : getNoButtonText()}
             </button>
           </div>
         </>
